@@ -2,6 +2,11 @@ project(QtAccountsServices)
 
 cmake_minimum_required(VERSION 2.8.12)
 
+# Silence CMake warnings
+if(POLICY CMP0063)
+    cmake_policy(SET CMP0063 NEW)
+endif()
+
 # Set version
 set(PROJECT_VERSION "0.6.0")
 set(PROJECT_VERSION_MAJOR 0)
@@ -26,6 +31,9 @@ endif()
 if(CMAKE_BUILD_TYPE MATCHES "^[Rr]elease$")
     add_definitions(-DQT_NO_DEBUG_OUTPUT)
 endif()
+
+# Definitions
+add_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 # Macros
 include(FeatureSummary)

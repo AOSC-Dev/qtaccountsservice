@@ -135,7 +135,7 @@ public:
     QString xsession() const;
     void setXSession(const QString &session);
 
-    void setPassword(const QString &password, const QString &hint = QString::fromUtf8(""));
+    void setPassword(const QString &password, const QString &hint = QString());
 
 Q_SIGNALS:
     void accountChanged();

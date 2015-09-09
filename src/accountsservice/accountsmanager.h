@@ -65,10 +65,10 @@ public:
 
 Q_SIGNALS:
     void userAdded(UserAccount *);
-    void userDeleted(UserAccount *);
+    void userDeleted(uid_t uid);
     void userCached(UserAccount *);
     void userFound(UserAccount *);
-    void listCachedUsersFinished(UserAccountList userList);
+    void listCachedUsersFinished(const UserAccountList &userList);
 
 protected:
     AccountsManagerPrivate *d_ptr;
